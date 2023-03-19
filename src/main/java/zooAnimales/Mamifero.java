@@ -3,7 +3,7 @@ package zooAnimales;
 import java.util.ArrayList;
 import gestion.Zona;
 
-class Mamifero extends Animal{
+public class Mamifero extends Animal{
     private static Mamifero[] listado;
     private static ArrayList<Mamifero> listado2;
     public static int caballos;
