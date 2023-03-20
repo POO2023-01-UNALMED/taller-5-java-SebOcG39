@@ -36,6 +36,10 @@ public class Reptil extends Animal{
         listado = listado2.toArray(new Reptil[listado2.size()]);
     }
     
+    public Reptil(String nombre, int edad, String habitat, String genero){
+        this(nombre, edad, habitat, genero, null);
+    }
+    
     public Reptil(){
         this.setNombre(null);
         this.setHabitat(null);

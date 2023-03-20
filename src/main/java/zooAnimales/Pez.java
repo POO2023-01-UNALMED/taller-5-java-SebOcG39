@@ -36,6 +36,10 @@ public class Pez extends Animal{
         listado = listado2.toArray(new Pez[listado2.size()]);
     }
     
+    public Pez(String nombre, int edad, String habitat, String genero){
+        this(nombre, edad, habitat, genero, null);
+    }
+    
     public Pez(){
         this.setNombre(null);
         this.setHabitat(null);

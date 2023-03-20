@@ -36,6 +36,10 @@ public class Mamifero extends Animal{
         listado = listado2.toArray(new Mamifero[listado2.size()]);
     }
     
+    public Mamifero(String nombre, int edad, String habitat, String genero){
+        this(nombre, edad, habitat, genero, null);
+    }
+    
     public Mamifero(){
         this.setNombre(null);
         this.setHabitat(null);

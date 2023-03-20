@@ -33,6 +33,10 @@ public class Ave extends Animal{
         listado = listado2.toArray(new Ave[listado2.size()]);
     }
     
+    public Ave(String nombre, int edad, String habitat, String genero){
+        this(nombre, edad, habitat, genero, null);
+    }
+    
     public Ave(){
         this.setNombre(null);
         this.setHabitat(null);
