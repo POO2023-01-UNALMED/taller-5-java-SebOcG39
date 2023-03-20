@@ -11,35 +11,6 @@ public class Anfibio extends Animal{
     private String colorPiel;
     private boolean venenoso;
     
-    public Anfibio(String nombre, int edad, String genero){
-        this.setNombre(nombre);
-        this.setEdad(edad);
-        this.setHabitat(null);
-        this.setGenero(genero);
-        this.setZona(null);
-        this.colorPiel = null;
-        this.venenoso = false;
-        Animal.animalCreado(this);
-        listado2.add(this);
-        listado = listado2.toArray(new Anfibio[listado2.size()]);
-    }
-    public Anfibio(String nombre, int edad, String habitat, String genero){
-        this(nombre, edad, habitat, genero, null);
-    }
-    
-    public Anfibio(String nombre, int edad, String habitat, String genero, Zona zona){
-        this.setNombre(nombre);
-        this.setHabitat(habitat);
-        this.setEdad(edad);
-        this.setZona(zona);
-        this.setGenero(genero);
-        this.colorPiel = null;
-        this.venenoso = false;
-        Animal.animalCreado(this);
-        listado2.add(this);
-        listado = listado2.toArray(new Anfibio[listado2.size()]);
-    }
-    
     public Anfibio(String nombre, int edad, String habitat, String genero, String color, boolean veneno){
         this.setNombre(nombre);
         this.setEdad(edad);
@@ -53,17 +24,15 @@ public class Anfibio extends Animal{
         listado = listado2.toArray(new Anfibio[listado2.size()]);
     }
     
+    public Anfibio(String nombre, int edad, String genero){
+        this(nombre, edad, null, genero, null, false);
+    }
+    public Anfibio(String nombre, int edad, String habitat, String genero){
+        this(nombre, edad, habitat, genero, null,false);
+    }
+    
     public Anfibio(){
-        this.setNombre(null);
-        this.setHabitat(null);
-        this.setEdad(0);
-        this.setZona(null);
-        this.setGenero(null);
-        this.colorPiel = null;
-        this.venenoso = false;
-        Animal.animalCreado(this);
-        listado2.add(this);
-        listado = listado2.toArray(new Anfibio[listado2.size()]);
+        this(null, 0 ,null,null,null,false);
     }
     
     public String movimiento(){

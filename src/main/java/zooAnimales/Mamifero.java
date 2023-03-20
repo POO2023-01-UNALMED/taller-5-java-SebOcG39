@@ -10,33 +10,7 @@ public class Mamifero extends Animal{
     public static int leones;
     private boolean pelaje;
     private int patas;
-    
-    public Mamifero(String nombre, int edad, String genero){
-        this.setNombre(nombre);
-        this.setEdad(edad);
-        this.setHabitat(null);
-        this.setGenero(genero);
-        this.setZona(null);
-        this.patas = 0;
-        this.pelaje = false;
-        Animal.animalCreado(this);
-        listado2.add(this);
-        listado = listado2.toArray(new Mamifero[listado2.size()]);
-    }
-    
-    public Mamifero(String nombre, int edad, String habitat, String genero, Zona zona){
-        this.setNombre(nombre);
-        this.setEdad(edad);
-        this.setHabitat(habitat);
-        this.setGenero(genero);
-        this.setZona(zona);
-        this.patas = 0;
-        this.pelaje = false;
-        Animal.animalCreado(this);
-        listado2.add(this);
-        listado = listado2.toArray(new Mamifero[listado2.size()]);
-    }
-    
+
     public Mamifero(String nombre, int edad, String habitat, String genero, boolean pelaje, int patas){
         this.setNombre(nombre);
         this.setEdad(edad);
@@ -49,21 +23,17 @@ public class Mamifero extends Animal{
         listado2.add(this);
         listado = listado2.toArray(new Mamifero[listado2.size()]);
     }
+    
+    public Mamifero(String nombre, int edad, String genero){
+        this(nombre, edad,null, genero);
+    }
+ 
     public Mamifero(String nombre, int edad, String habitat, String genero){
-        this(nombre, edad, habitat, genero, null);
+        this(nombre, edad, habitat, genero, false, 0);
     }
     
     public Mamifero(){
-        this.setNombre(null);
-        this.setHabitat(null);
-        this.setEdad(0);
-        this.setZona(null);
-        this.setGenero(null);
-        this.patas = 0;
-        this.pelaje = false;
-        listado2.add(this);
-        Animal.animalCreado(this);
-        listado = listado2.toArray(new Mamifero[listado2.size()]);
+        this(null,0,null,null,false,0);
     }
 
     public static int cantidadMamiferos(){

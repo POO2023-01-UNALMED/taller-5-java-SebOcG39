@@ -27,7 +27,13 @@ public class Zona {
         this.animales = nuevoArray;
     }
     public int cantidadAnimales(){
-        return animales.length;
+        int numAnimales = 0;
+        for (Animal animal : animales){
+            if (animal != null){
+                numAnimales++;
+            }
+        }
+        return numAnimales;
     }
 
     public Animal[] getAnimales() {

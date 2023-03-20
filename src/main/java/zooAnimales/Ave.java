@@ -10,19 +10,6 @@ public class Ave extends Animal{
     public static int aguilas;
     private String colorPlumas;
     
-    public Ave(String nombre, int edad, String genero){
-        this.setNombre(nombre);
-        this.setEdad(edad);
-        this.setHabitat(null);
-        this.setGenero(genero);
-        this.setZona(null);
-        this.colorPlumas = null;
-        Animal.animalCreado(this);
-        listado2.add(this);
-        listado = listado2.toArray(new Ave[listado2.size()]);
-    }
-
-    
     public Ave(String nombre, int edad, String habitat, String genero, String color){
         this.setNombre(nombre);
         this.setEdad(edad);
@@ -35,20 +22,16 @@ public class Ave extends Animal{
         listado = listado2.toArray(new Ave[listado2.size()]);
     }
     
+    public Ave(String nombre, int edad, String genero){
+        this(nombre, edad, null, genero);
+    }
+    
     public Ave(String nombre, int edad, String habitat, String genero){
         this(nombre, edad, habitat, genero, null);
     }
     
     public Ave(){
-        this.setNombre(null);
-        this.setHabitat(null);
-        this.setEdad(0);
-        this.setZona(null);
-        this.setGenero(null);
-        this.colorPlumas = null;
-        Animal.animalCreado(this);
-        listado2.add(this);
-        listado = listado2.toArray(new Ave[listado2.size()]);
+        this(null,0,null,null,null);
     }
     
     public static Ave crearHalcon(String nombre, int edad, String genero){

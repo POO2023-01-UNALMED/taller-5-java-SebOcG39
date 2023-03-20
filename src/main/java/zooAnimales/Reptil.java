@@ -11,36 +11,6 @@ public class Reptil extends Animal{
     private String colorEscamas;
     private int largoCola;
     
-    public Reptil(String nombre, int edad, String genero){
-        this.setNombre(nombre);
-        this.setEdad(edad);
-        this.setHabitat(null);
-        this.setGenero(genero);
-        this.setZona(null);
-        this.largoCola = 0;
-        this.colorEscamas = null;
-        Animal.animalCreado(this);
-        listado2.add(this);
-        listado = listado2.toArray(new Reptil[listado2.size()]);
-    }
-    
-    public Reptil(String nombre, int edad, String habitat, String genero, Zona zona){
-        this.setNombre(nombre);
-        this.setEdad(edad);
-        this.setHabitat(habitat);
-        this.setGenero(genero);
-        this.setZona(zona);
-        this.colorEscamas = null;
-        this.largoCola = 0;
-        Animal.animalCreado(this);
-        listado2.add(this);
-        listado = listado2.toArray(new Reptil[listado2.size()]);
-    }
-    
-    public Reptil(String nombre, int edad, String habitat, String genero){
-        this(nombre, edad, habitat, genero, null);
-    }
-    
     public Reptil(String nombre, int edad, String habitat, String genero, String color, int largo){
         this.setNombre(nombre);
         this.setEdad(edad);
@@ -53,17 +23,16 @@ public class Reptil extends Animal{
         listado = listado2.toArray(new Reptil[listado2.size()]);
     }
     
+    public Reptil(String nombre, int edad, String genero){
+        this(nombre, edad, null, genero, null,0);
+    }
+        
+    public Reptil(String nombre, int edad, String habitat, String genero){
+        this(nombre, edad, habitat, genero, null,0);
+    }   
+    
     public Reptil(){
-        this.setNombre(null);
-        this.setHabitat(null);
-        this.setEdad(0);
-        this.setZona(null);
-        this.setGenero(null);
-        this.colorEscamas = null;
-        this.largoCola = 0;
-        Animal.animalCreado(this);
-        listado2.add(this);
-        listado = listado2.toArray(new Reptil[listado2.size()]);
+        this(null,0,null,null,null,0);
     }
     
     public static Reptil crearIguana(String nombre, int edad, String genero){

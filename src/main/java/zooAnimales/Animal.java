@@ -10,15 +10,6 @@ public class Animal {
     private String genero;
     private Zona zona;
     
-    public Animal(String nombre, int edad, String habitat, String genero){
-        this.nombre = nombre;
-        this.edad = edad;
-        this.habitat = habitat;
-        this.genero= genero;
-        this.zona = null;
-        Animal.animalCreado(this);
-    }
-    
     public Animal(String nombre, int edad, String habitat, String genero, Zona zona){
         this.nombre = nombre;
         this.edad = edad;
@@ -28,13 +19,12 @@ public class Animal {
         Animal.animalCreado(this);
     }
     
+    public Animal(String nombre, int edad, String habitat, String genero){
+        this(nombre, edad, habitat, genero, null);
+    }
+    
     public Animal(){
-        nombre = null;
-        edad = 0;
-        habitat = null;
-        genero = null;
-        zona = null;
-        Animal.animalCreado(this);
+        this(null, 0, null, null, null);
     }
     
     public String movimiento(){
