@@ -39,7 +39,7 @@ public class Animal {
         return base;
     }
     
-    public String totalPorTipo(){
+    public static String totalPorTipo(){
         return "Mamiferos: "+Mamifero.cantidadMamiferos()+"\nAves: "+Ave.cantidadAves()+"\nReptiles: "+Reptil.cantidadReptiles()+"\nPeces: "+Pez.cantidadPeces()+"Anfibios: "+Anfibio.cantidadAnfibios();
     }
     
