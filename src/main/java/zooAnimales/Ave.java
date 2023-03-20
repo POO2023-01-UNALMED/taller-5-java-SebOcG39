@@ -22,13 +22,14 @@ public class Ave extends Animal{
         listado = listado2.toArray(new Ave[listado2.size()]);
     }
 
-    public Ave(String nombre, int edad, String habitat, String genero, Zona zona){
+    
+    public Ave(String nombre, int edad, String habitat, String genero, String color){
         this.setNombre(nombre);
         this.setEdad(edad);
         this.setHabitat(habitat);
         this.setGenero(genero);
-        this.setZona(zona);
-        this.colorPlumas = null;
+        this.setZona(null);
+        this.colorPlumas = color;
         listado2.add(this);
         listado = listado2.toArray(new Ave[listado2.size()]);
     }
