@@ -38,9 +38,13 @@ public class Animal {
         return base;
     }
     
-    //public String totalPorTipo(){
-        
-    //}
+    public String totalPorTipo(){
+        return "Mamiferos: "+Mamifero.cantidadMamiferos()+"\nAves: "+Ave.cantidadAves()+"\nReptiles: "+Reptil.cantidadReptiles()+"\nPeces: "+Pez.cantidadPeces()+"Anfibios: "+Anfibio.cantidadAnfibios();
+    }
+    
+    public static void animalCreado(){
+        Animal.totalAnimales++;
+    }
 
     public static int getTotalAnimales() {
         return totalAnimales;

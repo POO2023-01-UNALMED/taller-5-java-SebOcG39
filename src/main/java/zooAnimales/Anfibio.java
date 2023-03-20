@@ -11,6 +11,19 @@ public class Anfibio extends Animal{
     private String colorPiel;
     private boolean venenoso;
     
+    public Anfibio(String nombre, int edad, String genero){
+        this.setNombre(nombre);
+        this.setEdad(edad);
+        this.setHabitat(null);
+        this.setGenero(genero);
+        this.setZona(null);
+        this.colorPiel = null;
+        this.venenoso = false;
+        Animal.animalCreado();
+        listado2.add(this);
+        listado = listado2.toArray(new Anfibio[listado2.size()]);
+    }
+    
     public Anfibio(String nombre, int edad, String habitat, String genero, Zona zona){
         this.setNombre(nombre);
         this.setHabitat(habitat);
@@ -31,6 +44,7 @@ public class Anfibio extends Animal{
         this.setGenero(null);
         this.colorPiel = null;
         this.venenoso = false;
+        Animal.animalCreado();
         listado2.add(this);
         listado = listado2.toArray(new Anfibio[listado2.size()]);
     }
@@ -43,8 +57,8 @@ public class Anfibio extends Animal{
         return Anfibio.listado.length;
     }
     
-    public Anfibio crearRana(String nombre, int edad, String habitat, String genero, Zona zona){
-        Anfibio rana = new Anfibio(nombre, edad, habitat, genero, zona);
+    public Anfibio crearRana(String nombre, int edad, String genero){
+        Anfibio rana = new Anfibio(nombre, edad, genero);
         rana.setColorPiel("rojo");
         rana.setVenenoso(true);
         rana.setHabitat("selva");
@@ -52,8 +66,8 @@ public class Anfibio extends Animal{
         return rana;
     }
     
-    public Anfibio crearSalamandra(String nombre, int edad, String habitat, String genero, Zona zona){
-        Anfibio salamandra = new Anfibio(nombre, edad, habitat, genero, zona);
+    public Anfibio crearSalamandra(String nombre, int edad, String genero){
+        Anfibio salamandra = new Anfibio(nombre, edad, genero);
         salamandra.setColorPiel("negro y amarillo");
         salamandra.setVenenoso(false);
         salamandra.setHabitat("selva");
