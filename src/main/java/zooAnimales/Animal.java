@@ -50,8 +50,9 @@ public class Animal {
         return "Mamiferos: "+Mamifero.cantidadMamiferos()+"\nAves: "+Ave.cantidadAves()+"\nReptiles: "+Reptil.cantidadReptiles()+"\nPeces: "+Pez.cantidadPeces()+"Anfibios: "+Anfibio.cantidadAnfibios();
     }
     
-    public static void animalCreado(){
+    public static void animalCreado(Animal animal){
         Animal.totalAnimales++;
+        animal.zona.agregarAnimales(animal);
     }
 
     public static int getTotalAnimales() {

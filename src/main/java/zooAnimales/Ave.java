@@ -17,7 +17,7 @@ public class Ave extends Animal{
         this.setGenero(genero);
         this.setZona(null);
         this.colorPlumas = null;
-        Animal.animalCreado();
+        Animal.animalCreado(this);
         listado2.add(this);
         listado = listado2.toArray(new Ave[listado2.size()]);
     }
@@ -30,6 +30,7 @@ public class Ave extends Animal{
         this.setGenero(genero);
         this.setZona(null);
         this.colorPlumas = color;
+        Animal.animalCreado(this);
         listado2.add(this);
         listado = listado2.toArray(new Ave[listado2.size()]);
     }
@@ -45,7 +46,7 @@ public class Ave extends Animal{
         this.setZona(null);
         this.setGenero(null);
         this.colorPlumas = null;
-        Animal.animalCreado();
+        Animal.animalCreado(this);
         listado2.add(this);
         listado = listado2.toArray(new Ave[listado2.size()]);
     }

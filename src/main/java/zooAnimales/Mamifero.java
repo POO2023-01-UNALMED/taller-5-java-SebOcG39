@@ -19,7 +19,7 @@ public class Mamifero extends Animal{
         this.setZona(null);
         this.patas = 0;
         this.pelaje = false;
-        Animal.animalCreado();
+        Animal.animalCreado(this);
         listado2.add(this);
         listado = listado2.toArray(new Mamifero[listado2.size()]);
     }
@@ -32,6 +32,7 @@ public class Mamifero extends Animal{
         this.setZona(zona);
         this.patas = 0;
         this.pelaje = false;
+        Animal.animalCreado(this);
         listado2.add(this);
         listado = listado2.toArray(new Mamifero[listado2.size()]);
     }
@@ -44,6 +45,7 @@ public class Mamifero extends Animal{
         this.setZona(null);
         this.patas = patas;
         this.pelaje = pelaje;
+        Animal.animalCreado(this);
         listado2.add(this);
         listado = listado2.toArray(new Mamifero[listado2.size()]);
     }
@@ -60,7 +62,7 @@ public class Mamifero extends Animal{
         this.patas = 0;
         this.pelaje = false;
         listado2.add(this);
-        Animal.animalCreado();
+        Animal.animalCreado(this);
         listado = listado2.toArray(new Mamifero[listado2.size()]);
     }
 

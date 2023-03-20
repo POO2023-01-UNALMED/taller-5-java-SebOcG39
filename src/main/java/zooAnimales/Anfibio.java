@@ -19,7 +19,7 @@ public class Anfibio extends Animal{
         this.setZona(null);
         this.colorPiel = null;
         this.venenoso = false;
-        Animal.animalCreado();
+        Animal.animalCreado(this);
         listado2.add(this);
         listado = listado2.toArray(new Anfibio[listado2.size()]);
     }
@@ -35,6 +35,7 @@ public class Anfibio extends Animal{
         this.setGenero(genero);
         this.colorPiel = null;
         this.venenoso = false;
+        Animal.animalCreado(this);
         listado2.add(this);
         listado = listado2.toArray(new Anfibio[listado2.size()]);
     }
@@ -47,6 +48,7 @@ public class Anfibio extends Animal{
         this.setZona(null);
         this.colorPiel = color;
         this.venenoso = veneno;
+        Animal.animalCreado(this);
         listado2.add(this);
         listado = listado2.toArray(new Anfibio[listado2.size()]);
     }
@@ -59,7 +61,7 @@ public class Anfibio extends Animal{
         this.setGenero(null);
         this.colorPiel = null;
         this.venenoso = false;
-        Animal.animalCreado();
+        Animal.animalCreado(this);
         listado2.add(this);
         listado = listado2.toArray(new Anfibio[listado2.size()]);
     }

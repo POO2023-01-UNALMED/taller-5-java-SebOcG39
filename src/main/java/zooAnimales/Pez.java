@@ -19,7 +19,7 @@ public class Pez extends Animal{
         this.setZona(null);
         this.cantidadAletas = 0;
         this.colorEscamas = null;
-        Animal.animalCreado();
+        Animal.animalCreado(this);
         listado2.add(this);
         listado = listado2.toArray(new Pez[listado2.size()]);
     }
@@ -32,6 +32,7 @@ public class Pez extends Animal{
         this.setGenero(genero);
         this.colorEscamas = null;
         this.cantidadAletas = 0;
+        Animal.animalCreado(this);
         listado2.add(this);
         listado = listado2.toArray(new Pez[listado2.size()]);
     }
@@ -44,6 +45,7 @@ public class Pez extends Animal{
         this.setZona(null);
         this.colorEscamas = color;
         this.cantidadAletas = aletas;
+        Animal.animalCreado(this);
         listado2.add(this);
         listado = listado2.toArray(new Pez[listado2.size()]);
     }
@@ -60,7 +62,7 @@ public class Pez extends Animal{
         this.setGenero(null);
         this.colorEscamas = null;
         this.cantidadAletas = 0;
-        Animal.animalCreado();
+        Animal.animalCreado(this);
         listado2.add(this);
         listado = listado2.toArray(new Pez[listado2.size()]);
     }

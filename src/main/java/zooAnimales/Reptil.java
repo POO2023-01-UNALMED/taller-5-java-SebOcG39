@@ -19,7 +19,7 @@ public class Reptil extends Animal{
         this.setZona(null);
         this.largoCola = 0;
         this.colorEscamas = null;
-        Animal.animalCreado();
+        Animal.animalCreado(this);
         listado2.add(this);
         listado = listado2.toArray(new Reptil[listado2.size()]);
     }
@@ -32,6 +32,7 @@ public class Reptil extends Animal{
         this.setZona(zona);
         this.colorEscamas = null;
         this.largoCola = 0;
+        Animal.animalCreado(this);
         listado2.add(this);
         listado = listado2.toArray(new Reptil[listado2.size()]);
     }
@@ -60,7 +61,7 @@ public class Reptil extends Animal{
         this.setGenero(null);
         this.colorEscamas = null;
         this.largoCola = 0;
-        Animal.animalCreado();
+        Animal.animalCreado(this);
         listado2.add(this);
         listado = listado2.toArray(new Reptil[listado2.size()]);
     }
