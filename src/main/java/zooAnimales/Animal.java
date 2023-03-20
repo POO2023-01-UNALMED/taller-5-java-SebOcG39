@@ -16,6 +16,7 @@ public class Animal {
         this.habitat = habitat;
         this.genero= genero;
         this.zona = null;
+        Animal.animalCreado(this);
     }
     
     public Animal(String nombre, int edad, String habitat, String genero, Zona zona){
@@ -24,6 +25,7 @@ public class Animal {
         this.habitat = habitat;
         this.genero= genero;
         this.zona = zona;
+        Animal.animalCreado(this);
     }
     
     public Animal(){
@@ -32,6 +34,7 @@ public class Animal {
         habitat = null;
         genero = null;
         zona = null;
+        Animal.animalCreado(this);
     }
     
     public String movimiento(){
